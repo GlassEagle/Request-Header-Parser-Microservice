@@ -10,6 +10,7 @@ app.use('/controllers', express.static(process.cwd() + '/app/controllers'));
 app.use('/public', express.static(process.cwd() + '/public'));
 app.use('/common', express.static(process.cwd() + '/app/common'));
 
+app.set("trust proxy", true);
 routes(app);
 
 var port = process.env.PORT || 8080;
