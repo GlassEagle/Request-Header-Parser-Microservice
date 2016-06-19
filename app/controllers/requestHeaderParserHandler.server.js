@@ -10,9 +10,9 @@ function requestHeaderParserHandler (req, res) {
 			
 			var re;
 			
-			data.ipaddress = req.ip; //express property, depends on "trust proxy" setting
-			
 			if (req.headers) {
+			    
+			    data.ipaddress = req.ip; //express property, depends on "trust proxy" setting
 				
 				if (req.headers["accept-language"]){
 					//refrence https://tools.ietf.org/html/rfc7231#section-5.3.1 to remove the qvalues
