@@ -16,7 +16,7 @@ function requestHeaderParserHandler (req, res) {
 				
 				if (req.headers["accept-language"]){
 					//refrence https://tools.ietf.org/html/rfc7231#section-5.3.1 to remove the qvalues
-					re = /;(?:q=)(?:0(?:.\d\d?\d?)?|1(?:.00?0?)?)/g;
+					re = / ?; ?(?:q=)(?:0(?:.\d\d?\d?)?|1(?:.00?0?)?)/g;
 					var lang = req.headers["accept-language"].replace(re, "");
 					data.language = lang;
 				}
